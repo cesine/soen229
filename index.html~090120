@@ -1,0 +1,132 @@
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta name="generator" content="HTML Tidy for Linux (vers 1 September 2005), see www.w3.org" />
+	<title>SOEN 229 - Systems Software - TA - Cesine</title>
+	<meta http-equiv="content-type" content="text-html; charset=utf-8" />
+	<link href='style090110.css' rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+
+<table>
+<tr valign="top">
+<td>
+	<h1>TA</h1>
+	<p>Cesine<br />
+	v_cook encs concordia ca<br /></p>
+</td>
+<td width="50%">
+	<h1>SOEN 229</h1>
+	<p>SYSTEMS SOFTWARE<br />
+	Wednesday, 14:45--16:25, SB   <br />
+	H-929</p>
+</td>
+</tr>
+</table>
+
+<h1>Lab 1 - January 14</h1>
+
+<h2>Outline:</h2>
+<ul>
+<li> How to open a file, edit a file, and save a file using Vim</li>
+<li> How to make a file executable using permissions</li>
+<li> Linux command line tips and tricks </li>
+<li> How to program in Perl</li>
+<li> How to login to Concordia from home</li>
+</ul>
+
+<h2>1.1 Announcements</h2>
+	<ul>
+	<li class="c1"> Website for Cesine's tutorials: <br />
+	<a href="http://users.encs.concordia.ca/~v_cook/teaching/soen229/">http://users.encs.concordia.ca/~v_cook/teaching/soen229/</a> </li>
+	<li class="c1"> Website for Richard's tutorials: <br />
+	<a href="http://leguen.ca/soen229/">http://leguen.ca/soen229/</a> </li>
+	<li class="c1"> Website for SOEN 299: <br /><a href="http://users.encs.concordia.ca/~soen229_4/">http://users.encs.concordia.ca/~soen229_4/</a></li>
+	</ul>
+
+<h2>1.2 What is Perl?</h2>
+
+	<ul>
+	    <li class="c1">What is the difference between scripting and programming?<br />
+      "Perl is nicknamed "the Swiss Army chainsaw of programming languages" due to its flexibility and adaptability."</li>
+	    <li class="c1">Why use Perl? <br  />
+      "The language is intended to be practical (easy to use, efficient, complete) rather than beautiful (tiny, elegant, minimal)." <br/>
+      "Perl has also been called "The Duct Tape of the Internet"."
+	   </ul>
+
+Perl resources are available everywhere! In order to get an understanding of why Perl is special and different you need to understand it in context, the Wikipedia article gives some background about the language, and some basic introduction to Perl commands.
+<ul>
+      <li>For a easy to read explanation of the Perl language read the Wikipedia article:<br />
+      <a href="http://en.wikipedia.org/wiki/Perl#Language_structure">http://en.wikipedia.org/wiki/Perl#Language_structure</a>  </li>
+
+      <li class="c1"> Website for SOEN 299: <br /><a href="http://users.encs.concordia.ca/~soen229_4/PERL/">http://users.encs.concordia.ca/~soen229_4/PERL/</a></li>
+
+
+      <li>Richard Le Guen's website<br />
+      <a href="http://leguen.ca/soen229/links">http://leguen.ca/soen229/links</a> </li>
+
+</ul>
+
+<h2>1.3 Creating and Editing a Perl file using Vim</h2>
+For more information look for some <a href="http://www.google.ca/search?q=vim">Vim documentation</a>
+
+<ol>
+<li> Open a terminal, your prompt will end with > or $
+<li> Open a .pl file using vim <br /> > vim MyFirstScript.pl
+<li> Go into INSERT mode: Type i
+<li> Type a hello world Perl code
+
+<pre class=code><code>#! /usr/bin/perl
+# My first perl program; Hello World
+print &#8220;Hello world!\n&#8221;; # This line will generate output on the screen.</code></pre>
+</li>
+
+<li> Save the file and go back to the command prompt<br/>
+Go into command mode: Push Esc <br />
+Write and quit: Type :wq </li>
+
+<li>Make the file executable using <a href="http://en.wikipedia.org/wiki/Permissions#Octal_notation">permissions</a> <br /> > chmod 700 MyFirstScript.pl </li>
+<li>Execute (run) the file <br />
+> ./MyFirstScript.pl </li>
+</ol>
+
+<h2>1.4 Linux Tips and Tricks</h2>
+
+<p>For information and ideas for linux you can search <a href="http://ca.youtube.com/watch?v=gu0BtV_sO6Y&feature=related">YouTube</a> </p>
+
+
+<ul>
+<li> You can save time at the command line: <br />
+Push the up arrow to use a previous command <br />
+Push <i>tab</i> to autocomplete a file name
+ </li>
+<li> Switch between windows quickly without useing your mouse: <br />
+Hold down <i>alt</i> and push <i>tab</i> once and a menu will appear of all your open windows, push <i>tab</i> to cycle through your windows.
+</ul>
+
+<h2>1.4 How to program in Perl</h2>
+
+<p>You are now ready to follow Richard le Guen's
+<a href="http://leguen.ca/soen229/tutorials">Perl Tutorials (#2 and #3)</a>
+</p>
+
+<h2>1.5 How to login from home (Windows)</h2>
+
+<ol>
+<li>Download Putty: <a href="http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe">click to download putty</a>
+</li>
+<li>Open Putty</li>
+<li>In the Putty Configuration window, in the box for Host Name (or IP address) <br />
+Type login.encs.concordia.ca <br />
+Click on Open</li>
+<li> Type your encs username and password, then you will be logged into a linux machine on campus and you can do the same things you did in the terminal window in the lab</li>
+<ol>
+
+<p>If you like to reverse engineer here are the end scripts you should have after you finish Richard's 2 and 3 tutorials. <a href="lab1_scripts">perl script samples</a></p>
+
+
+</body>
+</html>

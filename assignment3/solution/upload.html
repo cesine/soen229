@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>File Upload Page</title>
+</head>
+<body>
+<div style='text-align:center;'>
+<h1>File Upload Page</h1>
+<form  enctype='multipart/form-data'
+	method='POST' action='file-upload.cgi'
+	style='border:1px solid black;width:100%;
+	text-align:center;display:block;margin:auto;'>
+<p>
+Place this html file somewhere in your document root.
+You will have to write a script which
+- When you hit the "upload" button -
+saves the uploaded file somewhere in the document root.
+</p>
+<input type='file' name='uploaded-file' />
+<input type='submit' value='upload' />
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+basicperl slides.pdf
+
+
+
+p11 scaler= scalar
+p11 automatically do the =automatically does the
+p12 donot = do not
+p18 has 100 month" = has 100 months"
+p19 not assigned gets undef = not assigned get undef
+p20 $i = "Janurary" = $i = "January"

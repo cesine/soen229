@@ -1,0 +1,448 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="resource-type" content="document" />
+<meta name="language" content="en-gb" />
+<meta name="distribution" content="global" />
+<meta name="copyright" content="2000, 2002, 2003, 2007 phpBB Group" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="imagetoolbar" content="no" />
+<title>phpBB &bull; View topic - How can i insert data in two database</title>
+
+
+<script type="text/javascript">
+// <![CDATA[
+	var jump_page = 'Enter the page number you wish to go to:';
+	var on_page = '1';
+	var per_page = '';
+	var base_url = '';
+	var style_cookie = 'phpBBstyle';
+	var style_cookie_settings = '; path=/; domain=.phpbb.com';
+	var onload_functions = new Array();
+	var onunload_functions = new Array();
+
+		/**
+	* Find a member
+	*/
+	function find_username(url)
+	{
+		popup(url, 760, 570, '_usersearch');
+		return false;
+	}
+
+	/**
+	* New function for handling multiple calls to window.onload and window.unload by pentapenguin
+	*/
+	window.onload = function()
+	{
+		for (i = 0; i <= onload_functions.length; i++)
+		{
+			eval(onload_functions[i]);
+		}
+	}
+
+	window.onunload = function()
+	{
+		for (i = 0; i <= onunload_functions.length; i++)
+		{
+			eval(onunload_functions[i]);
+		}
+	}
+	// ]]>
+</script>
+
+<script type="text/javascript" src="/theme/forum_fn.js"></script>
+
+<script type="text/javascript" src="/theme/swfobject.js"></script>
+
+
+
+<link href="/community/style.php?sid=e21b84876784b773a7d062dc4718a612&amp;id=1&amp;lang=en" rel="stylesheet" type="text/css" media="screen, projection" />
+<link href="/theme/index.css?2008082512" rel="stylesheet" type="text/css" media="screen, projection" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="/feeds/atom/?sid=e21b84876784b773a7d062dc4718a612" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/feeds/rss/?sid=e21b84876784b773a7d062dc4718a612" />
+</head>
+
+<body id="phpBB" class="community section-viewtopic ltr" >
+<div id="wrap">
+	<a id="top" name="top" accesskey="t"></a>
+	<div id="page-header">
+		<span class="side-left"></span>
+		<div class="header" style="position: relative;">
+			<h1 id="logo-banner"><a href="/?sid=e21b84876784b773a7d062dc4718a612">phpBB &bull; Creating Communities Worldwide</a></h1>
+<!--			<div id="countdown" style="width: 220px; height: 120px; position: absolute; left: 625px; top: 5px;"></div>-->
+		</div>
+		<span class="side-right"></span>
+	</div>
+
+	<div id="navbar">
+		<ul>
+			<li class="but-about"><a href="/about/?sid=e21b84876784b773a7d062dc4718a612"><span></span>About</a></li>
+			<li class="but-downloads"><a href="/downloads/?sid=e21b84876784b773a7d062dc4718a612"><span></span>Downloads</a></li>
+			<li class="but-customise"><a href="/customise/?sid=e21b84876784b773a7d062dc4718a612"><span></span>Customise</a></li>
+			<li class="but-support"><a href="/support/?sid=e21b84876784b773a7d062dc4718a612"><span></span>Support</a></li>
+			<li class="but-development"><a href="/development/?sid=e21b84876784b773a7d062dc4718a612"><span></span>Development</a></li>
+			<li class="but-blog"><a href="/blog/"><span></span>Blog</a></li>
+			<li class="but-community"><a href="/community/?sid=e21b84876784b773a7d062dc4718a612"><span></span>Community</a></li>
+			<li class="but-hosting"><a href="/hosting/?sid=e21b84876784b773a7d062dc4718a612"><span></span>Hosting</a></li>
+			<li id="searchbox">
+				<fieldset>
+					<!-- Google CSE Search Box Begins -->
+					<form method="get" action="/search/?sid=e21b84876784b773a7d062dc4718a612">
+					  <p><input name="q" id="q" type="text" size="40" value="" /></p>
+					 </form>
+				</fieldset>
+			</li>
+		</ul>
+	</div>
+
+
+	<div id="page-body">
+
+		<div class="navbar">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<ul class="linklist navlinks">
+			<li><a class="icon-home" href="./index.php?sid=e21b84876784b773a7d062dc4718a612" accesskey="h">Board index</a>  <strong>&#8249;</strong> <a href="./viewforum.php?f=49&amp;sid=e21b84876784b773a7d062dc4718a612">phpBB 3.0.x</a> <strong>&#8249;</strong> <a href="./viewforum.php?f=46&amp;sid=e21b84876784b773a7d062dc4718a612">3.0.x Support Forum</a></li>
+
+
+			<li class="rightside"><a href="./viewtopic.php?f=46&amp;t=1417375&amp;start=0&amp;sid=e21b84876784b773a7d062dc4718a612&amp;view=print" title="Print view" accesskey="p" class="print">Print view</a></li>		</ul>
+
+		<ul class="linklist">
+						<li class="rightside">
+				<a href="./faq.php?sid=e21b84876784b773a7d062dc4718a612" title="Frequently Asked Questions" class="icon-faq">FAQ</a>&nbsp;
+				<a href="./search.php?sid=e21b84876784b773a7d062dc4718a612" title="View the advanced search options" class="icon-search">Search</a>&nbsp; <a href="./ucp.php?mode=register&amp;sid=e21b84876784b773a7d062dc4718a612" class="icon-register">Register</a>&nbsp; 					<a href="./ucp.php?mode=login&amp;sid=e21b84876784b773a7d062dc4718a612" title="Login" accesskey="l" class="icon-logout">Login</a>
+							</li>
+		</ul>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	 <h2><a href="./viewtopic.php?f=46&amp;t=1417375&amp;start=0&amp;sid=e21b84876784b773a7d062dc4718a612">How can i insert data in two database</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body --><span style="display: none">Get help with installation and running phpBB 3.0.x here. Please do <span style="font-weight: bold">not</span> post bug reports, feature requests, or MOD-related questions here.<br /></span>	<div class="rules">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+					<strong>Forum rules</strong><br />
+			<span style="font-weight: bold">READ: <a href="http://www.phpbb.com/rules/" class="postlink">phpBB.com Board-Wide Rules and Regulations</a></span>		
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+<div class="topic-actions">
+
+	<div class="buttons">
+			<div class="reply-icon"><a href="./posting.php?mode=reply&amp;f=46&amp;t=1417375&amp;sid=e21b84876784b773a7d062dc4718a612" title="Post a reply"><span></span>Post a reply</a></div>
+		</div>
+
+			<div class="search-box">
+			<form method="post" id="topic-search" action="./search.php?t=1417375&amp;sid=e21b84876784b773a7d062dc4718a612">
+			<fieldset>
+				<input class="inputbox search tiny"  type="text" name="keywords" id="search_keywords" size="20" value="Search this topic…" onclick="if(this.value=='Search this topic…')this.value='';" onblur="if(this.value=='')this.value='Search this topic…';" />
+				<input class="button2" type="submit" value="Search" />
+				<input type="hidden" value="1417375" name="t" />
+				<input type="hidden" value="msgonly" name="sf" />
+			</fieldset>
+			</form>
+		</div>
+			<div class="pagination">
+			5 posts			 &bull; Page <strong>1</strong> of <strong>1</strong>		</div>
+	
+</div>
+<div class="clear"></div>
+
+	<div id="p8445665" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+			<h3 class="first"><a href="#p8445665">How can i insert data in two database</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=8445665&amp;sid=e21b84876784b773a7d062dc4718a612#p8445665"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" /></a>by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=363004&amp;sid=e21b84876784b773a7d062dc4718a612">moh.elmadany</a></strong> &raquo; Mon Jan 19, 2009 3:31 pm </p>
+
+			
+			<div class="content">are there any way (may be from config.php file) to insert data in two database in the same time ?</div>
+
+			
+		</div>
+
+					<dl class="postprofile" id="profile8445665">
+			<dt>
+				<a href="./memberlist.php?mode=viewprofile&amp;u=363004&amp;sid=e21b84876784b773a7d062dc4718a612">moh.elmadany</a>			</dt>
+
+			<dd>Registered User</dd>
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 284</dd><dd><strong>Joined:</strong> Fri Nov 23, 2007 1:25 pm</dd>			<dd>
+				<ul class="profile-icons">
+					<li class="email-icon"><a href="./memberlist.php?mode=email&amp;u=363004&amp;sid=e21b84876784b773a7d062dc4718a612" title="E-mail"><span>E-mail</span></a></li>				</ul>
+			</dd>
+		
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p8446575" class="post bg1 online">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+			<h3 ><a href="#p8446575">Re: How can i insert data in two database</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=8446575&amp;sid=e21b84876784b773a7d062dc4718a612#p8446575"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" /></a>by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=174373&amp;sid=e21b84876784b773a7d062dc4718a612" style="color: #CC6600;" class="username-coloured">ameeck</a></strong> &raquo; Mon Jan 19, 2009 4:48 pm </p>
+
+			
+			<div class="content">Why would you do that? You are probably searching for database replication, which is quite a complicated procedure and is not directly connected to phpBB support, which is provided here.</div>
+
+			<div id="sig8446575" class="signature">Czech phpBB Support | <a href="http://www.phpbb.cz" class="postlink">http://www.phpBB.cz</a> | <a href="http://www.ameeck.net/phpbb-services/my-phpbb-mods" class="postlink">My phpBB MODs</a> &amp; <a href="http://www.ameeck.net/codelib" class="postlink">phpBB Code Library</a><br /><span style="font-weight: bold">MOD installations, custom scripting, board installations etc. for a fair price - <a href="http://www.ameeck.net/phpbb-services" class="postlink">More information</a></span></div>
+		</div>
+
+					<dl class="postprofile" id="profile8446575">
+			<dt>
+				<a href="./memberlist.php?mode=viewprofile&amp;u=174373&amp;sid=e21b84876784b773a7d062dc4718a612"><img src="./download/file.php?avatar=174373_1231068309.jpg" width="120" height="97" alt="User avatar" /></a><br />
+				<a href="./memberlist.php?mode=viewprofile&amp;u=174373&amp;sid=e21b84876784b773a7d062dc4718a612" style="color: #CC6600;" class="username-coloured">ameeck</a>			</dt>
+
+			<dd>Support Team Member<br /><img src="./images/ranks/team/support.png" alt="Support Team Member" title="Support Team Member" /></dd>
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 3141</dd><dd><strong>Joined:</strong> Mon Mar 21, 2005 6:57 pm</dd><dd><strong>Location:</strong> Prague, Czech Republic</dd>			<dd>
+				<ul class="profile-icons">
+					<li class="email-icon"><a href="./memberlist.php?mode=email&amp;u=174373&amp;sid=e21b84876784b773a7d062dc4718a612" title="E-mail"><span>E-mail</span></a></li><li class="web-icon"><a href="http://www.phpbb.cz" title="WWW: http://www.phpbb.cz"><span>Website</span></a></li><li class="icq-icon"><a href="http://www.icq.com/people/webmsg.php?to=247600800" onclick="popup(this.href, 550, 320); return false;" title="ICQ"><span>ICQ</span></a></li><li class="yahoo-icon"><a href="http://edit.yahoo.com/config/send_webmesg?.target=ameeck&amp;.src=pg" onclick="popup(this.href, 780, 550); return false;" title="YIM"><span>YIM</span></a></li>				</ul>
+			</dd>
+		
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p8446815" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+			<h3 ><a href="#p8446815">Re: How can i insert data in two database</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=8446815&amp;sid=e21b84876784b773a7d062dc4718a612#p8446815"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" /></a>by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=363004&amp;sid=e21b84876784b773a7d062dc4718a612">moh.elmadany</a></strong> &raquo; Mon Jan 19, 2009 5:02 pm </p>
+
+			
+			<div class="content">in this topic , you can see that we can put list of user in config.php file <!-- l --><a class="postlink-local" href="http://www.phpbb.com/community/viewtopic.php?f=1&amp;t=397034">viewtopic.php?f=1&amp;t=397034</a><!-- l --><br /><br />but here i want any way to  insert data in list phpBB3 database<br /><br />Thanks ameeck  <img src="./images/smilies/icon_e_smile.gif" alt=":)" title="Smile" /></div>
+
+			
+		</div>
+
+					<dl class="postprofile" id="profile8446815">
+			<dt>
+				<a href="./memberlist.php?mode=viewprofile&amp;u=363004&amp;sid=e21b84876784b773a7d062dc4718a612">moh.elmadany</a>			</dt>
+
+			<dd>Registered User</dd>
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 284</dd><dd><strong>Joined:</strong> Fri Nov 23, 2007 1:25 pm</dd>			<dd>
+				<ul class="profile-icons">
+					<li class="email-icon"><a href="./memberlist.php?mode=email&amp;u=363004&amp;sid=e21b84876784b773a7d062dc4718a612" title="E-mail"><span>E-mail</span></a></li>				</ul>
+			</dd>
+		
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p8446915" class="post bg1 online">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+			<h3 ><a href="#p8446915">Re: How can i insert data in two database</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=8446915&amp;sid=e21b84876784b773a7d062dc4718a612#p8446915"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" /></a>by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=174373&amp;sid=e21b84876784b773a7d062dc4718a612" style="color: #CC6600;" class="username-coloured">ameeck</a></strong> &raquo; Mon Jan 19, 2009 5:10 pm </p>
+
+			
+			<div class="content">What you are trying to achieve will not be run by the phpBB scripts, but instead would use some other server script or software, which is more sophisticated for this.<br /><br />The topic you linked just randomly switches database users, which still access the same database. Maintaing two database connections or replicating the data to another database is a whole other story.</div>
+
+			<div id="sig8446915" class="signature">Czech phpBB Support | <a href="http://www.phpbb.cz" class="postlink">http://www.phpBB.cz</a> | <a href="http://www.ameeck.net/phpbb-services/my-phpbb-mods" class="postlink">My phpBB MODs</a> &amp; <a href="http://www.ameeck.net/codelib" class="postlink">phpBB Code Library</a><br /><span style="font-weight: bold">MOD installations, custom scripting, board installations etc. for a fair price - <a href="http://www.ameeck.net/phpbb-services" class="postlink">More information</a></span></div>
+		</div>
+
+					<dl class="postprofile" id="profile8446915">
+			<dt>
+				<a href="./memberlist.php?mode=viewprofile&amp;u=174373&amp;sid=e21b84876784b773a7d062dc4718a612"><img src="./download/file.php?avatar=174373_1231068309.jpg" width="120" height="97" alt="User avatar" /></a><br />
+				<a href="./memberlist.php?mode=viewprofile&amp;u=174373&amp;sid=e21b84876784b773a7d062dc4718a612" style="color: #CC6600;" class="username-coloured">ameeck</a>			</dt>
+
+			<dd>Support Team Member<br /><img src="./images/ranks/team/support.png" alt="Support Team Member" title="Support Team Member" /></dd>
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 3141</dd><dd><strong>Joined:</strong> Mon Mar 21, 2005 6:57 pm</dd><dd><strong>Location:</strong> Prague, Czech Republic</dd>			<dd>
+				<ul class="profile-icons">
+					<li class="email-icon"><a href="./memberlist.php?mode=email&amp;u=174373&amp;sid=e21b84876784b773a7d062dc4718a612" title="E-mail"><span>E-mail</span></a></li><li class="web-icon"><a href="http://www.phpbb.cz" title="WWW: http://www.phpbb.cz"><span>Website</span></a></li><li class="icq-icon"><a href="http://www.icq.com/people/webmsg.php?to=247600800" onclick="popup(this.href, 550, 320); return false;" title="ICQ"><span>ICQ</span></a></li><li class="yahoo-icon"><a href="http://edit.yahoo.com/config/send_webmesg?.target=ameeck&amp;.src=pg" onclick="popup(this.href, 780, 550); return false;" title="YIM"><span>YIM</span></a></li>				</ul>
+			</dd>
+		
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p8446965" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+			<h3 ><a href="#p8446965">Re: How can i insert data in two database</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=8446965&amp;sid=e21b84876784b773a7d062dc4718a612#p8446965"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" /></a>by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=363004&amp;sid=e21b84876784b773a7d062dc4718a612">moh.elmadany</a></strong> &raquo; Mon Jan 19, 2009 5:15 pm </p>
+
+			
+			<div class="content">Thanks ameeck  for your reply.</div>
+
+			
+		</div>
+
+					<dl class="postprofile" id="profile8446965">
+			<dt>
+				<a href="./memberlist.php?mode=viewprofile&amp;u=363004&amp;sid=e21b84876784b773a7d062dc4718a612">moh.elmadany</a>			</dt>
+
+			<dd>Registered User</dd>
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 284</dd><dd><strong>Joined:</strong> Fri Nov 23, 2007 1:25 pm</dd>			<dd>
+				<ul class="profile-icons">
+					<li class="email-icon"><a href="./memberlist.php?mode=email&amp;u=363004&amp;sid=e21b84876784b773a7d062dc4718a612" title="E-mail"><span>E-mail</span></a></li>				</ul>
+			</dd>
+		
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<form id="viewtopic" method="post" action="./viewtopic.php?f=46&amp;t=1417375&amp;start=0&amp;sid=e21b84876784b773a7d062dc4718a612">
+
+	<fieldset class="display-options" style="margin-top: 0; ">
+				<label>Display posts from previous: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+		<label>Sort by <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label> <label><select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select> <input type="submit" name="sort" value="Go" class="button2" /></label>
+			</fieldset>
+
+	</form>
+	<hr />
+
+<div class="topic-actions">
+	<div class="buttons">
+			<div class="reply-icon"><a href="./posting.php?mode=reply&amp;f=46&amp;t=1417375&amp;sid=e21b84876784b773a7d062dc4718a612" title="Post a reply"><span></span>Post a reply</a></div>
+		</div>
+
+			<div class="pagination">
+			5 posts			 &bull; Page <strong>1</strong> of <strong>1</strong>		</div>
+	</div>
+
+	<p></p><p><a href="./viewforum.php?f=46&amp;sid=e21b84876784b773a7d062dc4718a612" class="left-box left" accesskey="r">Return to 3.0.x Support Forum</a></p>
+	<form method="post" id="jumpbox" action="./viewforum.php?sid=e21b84876784b773a7d062dc4718a612" onsubmit="if(document.jumpbox.f.value == -1){return false;}">
+
+			<fieldset class="jumpbox">
+				<label for="f" accesskey="j">Jump to:</label>
+			<select name="f" id="f" onchange="if(this.options[this.selectedIndex].value != -1){ document.forms['jumpbox'].submit() }">
+							<option value="-1">Select a forum</option>
+			<option value="-1">------------------</option>				<option value="47">General</option>
+							<option value="14">&nbsp; &nbsp;Announcements</option>
+							<option value="49">phpBB 3.0.x</option>
+							<option value="46" selected="selected">&nbsp; &nbsp;3.0.x Support Forum</option>
+							<option value="65">&nbsp; &nbsp;&nbsp; &nbsp;[3.0.x] Convertors</option>
+							<option value="66">&nbsp; &nbsp;&nbsp; &nbsp;[3.0.x] Translations</option>
+							<option value="81">&nbsp; &nbsp;3.0.x Modifications Forums</option>
+							<option value="69">&nbsp; &nbsp;&nbsp; &nbsp;[3.0.x] MOD Database Releases</option>
+							<option value="72">&nbsp; &nbsp;&nbsp; &nbsp;[3.0.x] MOD Requests</option>
+							<option value="70">&nbsp; &nbsp;&nbsp; &nbsp;[3.0.x] MODs in Development</option>
+							<option value="71">&nbsp; &nbsp;&nbsp; &nbsp;[3.0.x] MOD Writers Discussion</option>
+							<option value="225">&nbsp; &nbsp;&nbsp; &nbsp;[3.0.x] AutoMOD</option>
+							<option value="80">&nbsp; &nbsp;3.0.x Styles Forums</option>
+							<option value="73">&nbsp; &nbsp;&nbsp; &nbsp;[3.0.x] Styles Database Releases</option>
+							<option value="185">&nbsp; &nbsp;&nbsp; &nbsp;[3.0.x] Styles in Development</option>
+							<option value="74">&nbsp; &nbsp;&nbsp; &nbsp;[3.0.x] Styles Support &amp; Discussion</option>
+							<option value="48">phpBB 2.0.x</option>
+							<option value="1">&nbsp; &nbsp;2.0.x Support Forum</option>
+							<option value="10">&nbsp; &nbsp;&nbsp; &nbsp;[2.0.x] Convertors</option>
+							<option value="50">&nbsp; &nbsp;&nbsp; &nbsp;[2.0.x] Translations</option>
+							<option value="18">&nbsp; &nbsp;2.0.x Discussion</option>
+							<option value="78">&nbsp; &nbsp;2.0.x Modifications Forums</option>
+							<option value="15">&nbsp; &nbsp;&nbsp; &nbsp;[2.0.x] MOD Database Releases</option>
+							<option value="94">&nbsp; &nbsp;&nbsp; &nbsp;[2.0.x] MOD Database Cleanup</option>
+							<option value="17">&nbsp; &nbsp;&nbsp; &nbsp;[2.0.x] MOD Requests</option>
+							<option value="16">&nbsp; &nbsp;&nbsp; &nbsp;[2.0.x] MODs in Development</option>
+							<option value="35">&nbsp; &nbsp;&nbsp; &nbsp;[2.0.x] MOD Writers Discussion</option>
+							<option value="77">&nbsp; &nbsp;2.0.x Styles Forums</option>
+							<option value="22">&nbsp; &nbsp;&nbsp; &nbsp;[2.0.x] Styles Database Releases</option>
+							<option value="23">&nbsp; &nbsp;&nbsp; &nbsp;[2.0.x] Styles Development &amp; Discussion</option>
+							<option value="52">Non-support Specific</option>
+							<option value="64">&nbsp; &nbsp;phpBB Discussion</option>
+							<option value="105">&nbsp; &nbsp;phpBB Events and Meetings</option>
+							<option value="6">&nbsp; &nbsp;General Discussion</option>
+							<option value="26">&nbsp; &nbsp;Test Me</option>
+						</select>
+			<input type="submit" value="Go" class="button2" />
+		</fieldset>
+	</form>
+
+	<h3>Who is online</h3>
+	<p>Users browsing this forum: <a href="./memberlist.php?mode=viewprofile&amp;u=345720&amp;sid=e21b84876784b773a7d062dc4718a612">alligatordev</a>, <span style="color: #9E8DA7;" class="username-coloured">Ask Jeeves [Bot]</span>, <a href="./memberlist.php?mode=viewprofile&amp;u=660775&amp;sid=e21b84876784b773a7d062dc4718a612">Brogan</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=152229&amp;sid=e21b84876784b773a7d062dc4718a612" style="color: #333333;" class="username-coloured">ChrisRLG</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=873595&amp;sid=e21b84876784b773a7d062dc4718a612">clips401</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=758465&amp;sid=e21b84876784b773a7d062dc4718a612">d0s3</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=163542&amp;sid=e21b84876784b773a7d062dc4718a612" style="color: #CC6600;" class="username-coloured">D¡cky</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=880475&amp;sid=e21b84876784b773a7d062dc4718a612">dman535</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=378995&amp;sid=e21b84876784b773a7d062dc4718a612">DutchToxophilite</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=41745&amp;sid=e21b84876784b773a7d062dc4718a612">Frank Rizzo</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=873075&amp;sid=e21b84876784b773a7d062dc4718a612">fraynelson</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=489165&amp;sid=e21b84876784b773a7d062dc4718a612">Halion</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=123849&amp;sid=e21b84876784b773a7d062dc4718a612" style="color: #CC6600;" class="username-coloured">Kevin Clark</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=94198&amp;sid=e21b84876784b773a7d062dc4718a612">lanesharon</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=879945&amp;sid=e21b84876784b773a7d062dc4718a612">Matt_N-Pulse_Rebirth</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=286057&amp;sid=e21b84876784b773a7d062dc4718a612">Pit$Bull</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=174332&amp;sid=e21b84876784b773a7d062dc4718a612">sand_danser</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=196530&amp;sid=e21b84876784b773a7d062dc4718a612">Sean Paxton</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=879735&amp;sid=e21b84876784b773a7d062dc4718a612">Shake-Zula</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=879405&amp;sid=e21b84876784b773a7d062dc4718a612">TheFlu</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=880565&amp;sid=e21b84876784b773a7d062dc4718a612">Tyrone Blue</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=792965&amp;sid=e21b84876784b773a7d062dc4718a612">Yrah</a> and 96 guests</p>
+</div>
+	<div id="page-footer">
+						<div class="navbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+			<ul class="linklist">
+				<li>
+					<a class="icon-home" href="./index.php?sid=e21b84876784b773a7d062dc4718a612">Board index</a> &nbsp;
+									</li>
+				<li class="rightside"><a href="./memberlist.php?mode=leaders&amp;sid=e21b84876784b773a7d062dc4718a612">The team</a> &bull; All times are UTC </li>
+			</ul>
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+				<h3 class="advertisement">Advertisement</h3>
+		<div id="advert-leaderboard">
+			<a href='http://www.phpbb.com/ads/www/delivery/ck.php?oaparams=2__bannerid=136__zoneid=11__cb=47a0782184__oadest=http://phpbb.vistapages.com/' onclick='javascript:this.target="_blank";' rel='external'><img src='http://www.phpbb.com/ads/www/images/vistapages-728x90_2.gif' width='728' height='90' alt='' title='' /></a><div id='beacon_47a0782184' style='position: absolute; left: 0px; top: 0px; visibility: hidden;'><img src='http://www.phpbb.com/ads/www/delivery/lg.php?bannerid=136&amp;campaignid=172&amp;zoneid=11&amp;channel_ids=,&amp;loc=http%3A%2F%2Fwww.phpbb.com%2Fcommunity%2Fviewtopic.php%3Ff%3D46%26t%3D1417375&amp;cb=47a0782184' width='0' height='0' alt='' style='width: 0px; height: 0px;' /></div>		</div>
+				<p class="textlink-ads">
+			<a href="http://www.web-hosting-top.com/" rel="external sponsor">Web Hosting Reviews</a> &bull;
+			<a href="http://www.webhosting.uk.com/" rel="external sponsor">Web Hosting UK</a> &bull;
+			<a href="http://secure.hostican.com/cgi-bin/affiliates/clickthru.cgi?id=phpbbdedhost" rel="external sponsor">Dedicated Hosting</a> &bull;
+			<a href="http://icdsoft.com?aff=phpbbadvertising.sitewide" rel="external sponsor">$6/month Webhosting</a> &bull;
+			<a href="http://www.heartinternet.co.uk/index.shtml" rel="external sponsor">Reseller Web Hosting UK</a>
+
+
+		</p>
+		<p id="sf-tracker">
+			<a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=7885&amp;type=5" alt="SourceForge Logo" /></a>
+		</p>
+		<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		// <![CDATA[
+		_uacct = "UA-93879-2";
+		urchinTracker();
+		// ]]>
+		</script>
+		<span class="fcorners-bottom"><span></span></span>
+	</div>
+</div>
+<div id="copyright">
+	&copy; 2000, 2002, 2003, 2007 <a href="/about/?sid=e21b84876784b773a7d062dc4718a612">phpBB Group</a>
+	&bull; Designed by <a href="/?sid=e21b84876784b773a7d062dc4718a612">phpBB</a> &amp; <a href="http://www.subblue.com/">subBlue</a>
+	&bull; Header illustrations by <a href="http://www.vladstudio.com/">Vlad Gerasimov</a>	&bull; Hosting donated by <a href="http://www.osuosl.org">OSUOSL</a>
+	</div>
+
+<!-- script type="text/javascript">
+	var so = new SWFObject("http://www.phpbb.com/theme/headers/countdown_londonvasion_header.swf", "counter", "220", "120", "8", "#FFFFFF");
+	so.addVariable("file", "http://www.phpbb.com/date.php");
+	so.addVariable("link", "http://www.phpbb.com/community/viewtopic.php?t=1058455");
+	so.addParam("wmode", "transparent");
+	so.write("countdown");
+</script -->
+</body>
+</html>

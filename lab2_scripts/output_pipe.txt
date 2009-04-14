@@ -1,0 +1,20 @@
+<AUTHOR>    by   moh.elmadany   » Mon Jan 19, 2009 3:31 pm  
+<CONTENT> are there any way (may be from config.php file) to insert data in two database in the same time ?
+<AUTHOR>    by   ameeck   » Mon Jan 19, 2009 4:48 pm  
+<CONTENT> Why
+would you do that? You are probably searching for database replication,
+which is quite a complicated procedure and is not directly connected to
+phpBB support, which is provided here.
+<AUTHOR>    by   moh.elmadany   » Mon Jan 19, 2009 5:02 pm  
+<CONTENT> in this topic , you can see that we can put list of user in config.php file viewtopic.php?f=1&amp;t=397034but here i want any way to  insert data in list phpBB3 databaseThanks ameeck  
+<AUTHOR>    by   ameeck   » Mon Jan 19, 2009 5:10 pm  
+<CONTENT> What
+you are trying to achieve will not be run by the phpBB scripts, but
+instead would use some other server script or software, which is more
+sophisticated for this.The topic you linked just randomly
+switches database users, which still access the same database.
+Maintaing two database connections or replicating the data to another
+database is a whole other story.
+<AUTHOR>    by   moh.elmadany   » Mon Jan 19, 2009 5:15 pm  
+<CONTENT> Thanks ameeck  for your reply.
+

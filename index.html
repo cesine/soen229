@@ -1,0 +1,352 @@
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta name="generator" content="HTML Tidy for Linux (vers 1 September 2005), see www.w3.org" />
+	<title>SOEN 229 - Systems Software - TA - Cesine</title>
+	<meta http-equiv="content-type" content="text-html; charset=utf-8" />
+	<link href='style090110.css' rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+
+<table>
+<tr valign="top">
+<td>
+	<h1>TA</h1>
+	<p>Cesine<br />
+	v_cook encs concordia ca<br /></p>
+</td>
+<td width="50%">
+	<h1>SOEN 229</h1>
+	<p>SYSTEMS SOFTWARE<br />
+	Wednesday, 14:45--16:25, SB   <br />
+	H-929</p>
+</td>
+</tr>
+</table>
+
+<h1>Lab 1 - January 14</h1>
+
+<h2>Outline:</h2>
+<ul>
+<li> How to open a file, edit a file, and save a file using Vim</li>
+<li> How to make a file executable using permissions</li>
+<li> Linux command line tips and tricks </li>
+<li> How to program in Perl</li>
+<li> How to login to Concordia from home</li>
+</ul>
+
+<h2>1.1 Announcements</h2>
+	<ul>
+	<li class="c1"> Website for Cesine's tutorials: <br />
+	<a href="http://users.encs.concordia.ca/~v_cook/teaching/soen229/">http://users.encs.concordia.ca/~v_cook/teaching/soen229/</a> </li>
+	<li class="c1"> Website for Richard's tutorials: <br />
+	<a href="http://leguen.ca/soen229/">http://leguen.ca/soen229/</a> </li>
+	<li class="c1"> Website for SOEN 299: <br /><a href="http://users.encs.concordia.ca/~soen229_4/">http://users.encs.concordia.ca/~soen229_4/</a></li>
+	</ul>
+
+<h2>1.2 What is Perl?</h2>
+
+	<ul>
+	    <li class="c1">What is the difference between scripting and programming?<br />
+      "Perl is nicknamed "the Swiss Army chainsaw of programming languages" due to its flexibility and adaptability."</li>
+	    <li class="c1">Why use Perl? <br  />
+      "The language is intended to be practical (easy to use, efficient, complete) rather than beautiful (tiny, elegant, minimal)." <br/>
+      "Perl has also been called "The Duct Tape of the Internet"."
+	   </ul>
+
+Perl resources are available everywhere! In order to get an understanding of why Perl is special and different you need to understand it in context, the Wikipedia article gives some background about the language, and some basic introduction to Perl commands.
+<ul>
+      <li>For a easy to read explanation of the Perl language read the Wikipedia article:<br />
+      <a href="http://en.wikipedia.org/wiki/Perl#Language_structure">http://en.wikipedia.org/wiki/Perl#Language_structure</a>  </li>
+
+      <li class="c1"> Website for SOEN 299: <br /><a href="http://users.encs.concordia.ca/~soen229_4/PERL/">http://users.encs.concordia.ca/~soen229_4/PERL/</a></li>
+
+
+      <li>Richard Le Guen's website<br />
+      <a href="http://leguen.ca/soen229/links">http://leguen.ca/soen229/links</a> </li>
+
+</ul>
+
+<h2>1.3 Creating and Editing a Perl file using Vim</h2>
+For more information look for some <a href="http://www.google.ca/search?q=vim">Vim documentation</a>
+
+<ol>
+<li> Open a terminal, your prompt will end with > or $
+<li> Open a .pl file using vim <br /> > vim MyFirstScript.pl
+<li> Go into INSERT mode: Type i
+<li> Type a hello world Perl code
+
+<pre class=code><code>#! /usr/bin/perl
+# My first perl program; Hello World
+print &#8220;Hello world!\n&#8221;; # This line will generate output on the screen.</code></pre>
+</li>
+
+<li> Save the file and go back to the command prompt<br/>
+Go into command mode: Push Esc <br />
+Write and quit: Type :wq </li>
+
+<li>Make the file executable using <a href="http://en.wikipedia.org/wiki/Permissions#Octal_notation">permissions</a> <br /> > chmod 700 MyFirstScript.pl </li>
+<li>Execute (run) the file <br />
+> ./MyFirstScript.pl </li>
+</ol>
+
+<h2>1.4 Linux Tips and Tricks</h2>
+
+<p>For information and ideas for linux you can search <a href="http://ca.youtube.com/watch?v=gu0BtV_sO6Y&feature=related">YouTube</a> </p>
+
+
+<ul>
+<li> You can save time at the command line: <br />
+Push the up arrow to use a previous command <br />
+Push <i>tab</i> to autocomplete a file name
+ </li>
+<li> Switch between windows quickly without useing your mouse: <br />
+Hold down <i>alt</i> and push <i>tab</i> once and a menu will appear of all your open windows, push <i>tab</i> to cycle through your windows.
+<li> If you run your perl script at the command line and nothing happens, or it goes into an infinite loop you can kill it. To kill (terminate) an unresponsive program push Ctl+c.
+</ul>
+
+<h2>1.4 How to program in Perl</h2>
+
+<p>You are now ready to follow Richard le Guen's
+<a href="http://leguen.ca/soen229/tutorials">Perl Tutorials (#2 and #3)</a>
+</p>
+
+<h2>1.5 How to login from home (Windows)</h2>
+
+<ol>
+<li>Download Putty: <a href="http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe">click to download putty</a>
+</li>
+<li>Open Putty</li>
+<li>In the Putty Configuration window, in the box for Host Name (or IP address) <br />
+Type login.encs.concordia.ca <br />
+Click on Open</li>
+<li> Type your encs username and password, then you will be logged into a linux machine on campus and you can do the same things you did in the terminal window in the lab</li>
+</ol>
+
+<p>If you like to reverse engineer here are the end scripts you should have after you finish Richard's 2 and 3 tutorials. <a href="lab1_scripts">perl script samples</a></p>
+
+<hr>
+
+<h1>Lab 2 - January 21 </h1>
+
+<h2>2.1 Use regular expressions to strip HTML tags and extract information</h2>
+
+Last week in Richard's Tutorial 3 we learned how to either pass a filename to a perl script, or to use the pipe with a perl script. Today you will combine what you learned last week with some common uses of regular expressions to create an HTML stripper for the PHPbbb CMS (Content Management System). This CMS is the most common implmentation of webforums. After you finish, your perl script should be able to extract Author and Content info from most webforums.
+
+<h2>2.2 Review last weeks tutorial</h2>
+
+<p>
+<a href="http://leguen.ca/soen229/tutorials/view/linux-and-perl">Review Richar'ds Tutorial 3</a>
+</p>
+
+<p>
+<a href="http://users.encs.concordia.ca/~v_cook/teaching/soen229/lab1_scripts/GrepFile.pl">or Use a finished version of Tutorial 3's result</a>
+</p>
+<h2>2.3 Get the HTML input</h2>
+
+Save the html of the page which we will be processing into a directory where you will write your perl script.
+<p>
+<a href="http://www.phpbb.com/community/viewtopic.php?f=46&t=1417375">HTML input</a>
+</p>
+<h2>2.4 Get the txt output</h2>
+
+You will make a perl script which takes the HTML code and creates <a href="http://users.encs.concordia.ca/~v_cook/teaching/soen229/lab2_scripts/output.txt">this output.</a>
+
+
+<h2>2.5 Design your algorhithm</h2>
+<p>Compare the HTML and the txt files, what kind of logic do you need? What kind of research do you need to do?
+</p>
+
+<blockquote>Hint: You can practice differnt regular expression's in Kate, using Kate's Replace command (CTL+R).
+</blockquote>
+
+<p> For information about regular expressions and how to use them you can refer to Richard's Tutorial 3, wikipedia or google. </a>
+
+<h2>2.6 Show me your final script and your output</h2>
+
+Before you go today you should show me your final script and you should be able to explain to me why you made the regular expressions you did and why you designed your algorithm the way that you did.
+<hr />
+
+<h2>Lab 3 - January 28<h2>
+
+
+<h2>3.1 Review previous perl scripts</h2>
+
+Review previous <a href="http://leguen.ca/soen229/tutorials" target="top">perl scripts.</a>
+
+<h2>3.2 Create a word counter in Perl</h2>
+<p>Here is a simplifed version of this week's script, a short perl script that counts words in a string.</p>
+<p>
+Click here for a <a href="http://ca.youtube.com/watch?v=CPTPAnK3Lec">video tutorial</a>
+</p>
+<p>
+The script illustrates the use of subroutines, hashes, foreach loops on arrays and the split command.</p>
+
+Or you can open it locally by typing: (recommended) <br />
+
+ totem /www/home/v/v_cook/teaching/perl-wordcount.ogg & </p>
+
+<p>After you have viewed the video try the <a href="http://leguen.ca/soen229/tutorials" target="top">tutorial.</a></p>
+<hr />
+
+<h2>Lab 4 - February 4</h2>
+
+<h2>4.1 Individual Help and Explanation of Linux OS and Perl</h2>
+
+<h2>4.2 Work individually on Programming Assignment 1</h2>
+
+<p>
+So far we have been re-creating Unix command lines such as <i>cat</i> and <i>grep</i>, the assignment asks you to re-create MS-DOS command lines. For bonus points you can also design your own Comand Line Interpreter (Shell) to interpret your commands just like Bash $ or TSCH >. </p>
+
+<a href="http://leguen.ca/soen229/assignments/view/assignment-1">http://leguen.ca/soen229/assignments/view/assignment-1</a>
+<hr />
+<h2>Lab 5 - February 11</h2>
+
+<h2>5.1 Work on Programming Assignment 1</h2>
+
+<hr />
+
+<h2>Lab 6 - February 18</h2>
+
+<h2>6.1 Tutorial on Command Line Options and the lstat Function</h2>
+
+<a target="top" href="http://leguen.ca/soen229/tutorials/view/options-and-lstat">Tutorial on command line options and the lstat function</a>
+
+<h2>6.2 Work on Programming Assignment 2</h2>
+
+<a target="top" href="http://leguen.ca/soen229/assignments/view/assignment-2">Assignment 2</a>
+
+Assignment 2 builds on assignment 1. It asks for a more advanced Command Line Iterpreter as well as more scripts.
+
+<hr />
+<h2>Lab 7 - March 4</h2>
+
+
+<h2>Individual feedback and comments on Assignment 1</h2>
+
+<p>
+If you missed section come and see me to recieve feedback about your coding and your grade.
+</p>
+
+<a href="assignment1_sample">A sample assignment 1 is posted here</a>
+
+
+
+
+<h2>Explaination of Assignment 2</h2>
+
+<p>One of the best ways to learn what an Operating System is, is to build one. We don't have time to build an entire opperating system. What we are doing in our tutorial is stepping back in time ~50 years, to a time when computer users interacted with the computer using text only, before the GUI (graphical user interface). Users can still interact with the computer using text only, at the command line interface. The commandline is very popular among Unix/Linux users, and not very popular among Windows users (the dos command prompt). </p>
+
+<p>So far we have looked at the kinds of tools that programmers need to program:
+<ul>
+<li> ls(Unix)/DIR(DOS): quickly print the file names in the directory</li>
+<li> cat(Unix)/TYPE(DOS): quickly print the contents of a file to the screen so we can check it without editing it </li>
+<li> grep(Unix)/FIND(DOS): quickly print only the relevent lines of a file </li>
+</ul>
+</p>
+
+<p>Now that you have coded these simple scripts (using Perl because it is designed to do these things), we want you to see what it takes for the system to actually execute (call) your scripts. So we want you to build a program that "interpretes" what the user types at the command line, i.e. a command line interpreter.</p>
+
+<p>Assignment 2 has two goals, the first is for you to demonstrate knowledge of systems and the second is to demonstrate knowledge of Perl. Assignment 3 will also be using Perl, and Perl will be useful if you do system administrator tasks or if you do natural language processing or artificial intelence. </p>
+
+<p>To achieve these two goals, the marking scheme for Assignment 2 is provided at the bottom of the assignment page. Please focus on it while you are doing your assignment, you will be graded on whether or not you fulfull the marking scheme. 70% of marks go toward coding and 30% of the marks go toward demonstrating that you have learned something. The best way to demonstrate learning something about system software, is to first develop an understanding of what a Command Line Interpretor is, and to incorporate the things you have learned about processes and filestructure in Dr. Fancott's lecture into your comments. </p>
+
+<p>My suggestions:
+
+<ul>
+<li>Read the <a href="http://en.wikipedia.org/wiki/Command-line_interpreter" target="top">Wikipedia article on Command-line Interpreters</a> </li>
+<li>Create your algorithm before you start coding </li>
+<ol>
+<li>Take in a user input</li>
+<li>Call the script the user wants</li>
+<li>Return the results the user wants to the screen</li>
+<li>Repeat until the user wants to exit</li>
+</ol>
+<li>Be resourceful, it will help you in your future classes more than specified knowledge about x function (look up functions and code samples on the tutorial websites, on <a href="http://www.google.ca/search?q=lstat+perl&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:official&client=firefox-a" target="top">Google</a>, in the <a href="http://perldoc.perl.org/functions/lstat.html" target="top">Perldocs</a>, talk to eachother and friends) </li>
+</ul>
+
+
+<h3>How to require variables to be declared (easier debuging): use strict</h3>
+
+<p>
+Look at the <a href="lab7_scripts" target="top">useStrictExample.pl</a> script. Many bugs in Perl come from the fact that you don't have to declare variables before using them. This means that you can have a typo where you meant to have a variable that you used before but Perl won't complain (no compile error). The "use strict;" will make Perl act like other languages; you will have to declare your variables with a "my" in front of them.<br/>
+<img src="lab7_scripts/useStrictExample.jpg"></p>
+
+<h3>How to write a user friendly program: usage</h3>
+
+<p>If your script allows options or it needs arguments its a good idea to tell the user how to use your script. You can do this by providing help and/or usage information. Look at the <a href="lab7_scripts" target="top">usageExample.pl</a> script for more explaination.<br/>
+<img src="lab7_scripts/usageExample.jpg"> </p>
+
+<h3>Hashes</h3>
+
+<h3>How consumer processes can process output before producer processes are finished: piping</h3>
+
+<p>Piping works like a water pipe. Water (or data) starts to flow into one end of the pipe, and comes out the other end of the pipe before the water stops flowing at the front of the pipe. Piping improves your data throughput. To test piping try "cat type.pl | grep while"
+</p>
+<p>
+if this works, then change grep for your find.pl for example "cat type.pl | ./find.pl while"
+
+</p>
+<h3>How to do pass by reference (pointers) in Perl</h3>
+<hr/>
+<h2>Lab 8 - March 11</h2>
+
+<h3>Individual help on Assignment 2</h3>
+<p>
+Please be sure that your assignment meets the Marking requirements on the bottom of the <a href="http://leguen.ca/soen229/assignments/view/assignment-2" target="top">Assignment 2 page</a></p>
+
+<h3>Overview of Final Projcect</h3>
+
+This is your final programming assignment. You can find <a href="assignment3/assign3_v3.html" target="top">a  marking scheme and a tutorial</a> here.
+
+<p>
+You can find sample files <a href="assignment3">here</a>
+<p>
+
+You will be making a mini-server software. The component of the server that you will be making is circled in red below<br />
+<img src="server.jpg">
+</p>
+
+<hr />
+
+<h2>Lab 9 - March 18</h2>
+
+<h3>Individual comments on Assignment 2</h3>
+
+<h3>Work on tutorials for Final Project</h3>
+<p>
+Work on the tutorials for March <a href="http://leguen.ca/soen229/tutorials" target="top">http://leguen.ca/soen229/tutorials</a>
+</p>
+
+<h3>Work on Final Projet</h3>
+
+<p>
+<a href="http://leguen.ca/soen229/assignments/view/programming%20project" target="top">http://leguen.ca/soen229/assignments/view/programming%20project</a>
+</a>
+
+<h2>Lab 10 - March 25</h2>
+
+<h3>Work on tutorials for Final Project</h3>
+
+<hr />
+<h2>Lab 11 - April 1</h2>
+
+<h3>Work on tutorials for Final Project</h3>
+
+<h3>How to write a .cgi script</h3>
+
+Writing a .cgi script is like any other perl script except:
+
+<ul>
+<li> It has a .cgi extension, instead of .pl
+<li> You have to have <tt>print "Content-type: text/html\n\n";</tt> as the first print statement
+</ul>
+
+For more information see <a href="http://users.encs.concordia.ca/~v_cook/teaching/soen229/assignment3/assign3_v3.html#4">this tutorial on writing a cgi script.</a>
+
+
+</body>
+</html>

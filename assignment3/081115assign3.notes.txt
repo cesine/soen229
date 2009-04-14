@@ -1,0 +1,19 @@
+notes from 12.4
+
+search engine
+
+inverted index/inverted file, 
+
+1. occurance list of index terms in dictionary format:
+keys are words, proper nouns that might be searched for
+Entry(word,Lcollection of pages containing the word)
+
+2. compressed trie for the entries in the dictionray (uindex terms 
+the external nodes store the index of the occurance listfor tha tturm
+
+the occurance lists will be big, so just hve a poitner to them in the tree to keep the leaves cleen
+find the keyword in the tree, then return the associated occurance list
+
+to facilitate intersection of multiple keywords' occurance list the occurance list should also be a dictionary collection see 11.6
+
+

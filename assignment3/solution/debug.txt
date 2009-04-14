@@ -1,0 +1,32 @@
+This line doesnt show POST /file-upload.cgi HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.20) Gecko/20081217 Firefox/2.0.0.20
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Alive: 300
+Connection: keep-alive
+Referer: http://localhost:8080/upload.html
+Content-Type: multipart/form-data; boundary=---------------------------17014758334289368781412672131
+Content-Length: 915
+
+
+In the insert into ENV hash subroutine 
+I will insert this 
+POST /file-upload.cgi HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.20) Gecko/20081217 Firefox/2.0.0.20
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Alive: 300
+Connection: keep-alive
+Referer: http://localhost:8080/upload.html
+Content-Type: multipart/form-data; boundary=---------------------------17014758334289368781412672131
+Content-Length: 915
+
+In the print hash subroutine
+This is the content type  found cgiIn the file requested sectionI will try to open this file /www/home/v/v_cook/teaching/soen229/assignment3/solution/file-upload.cgiSucess
+

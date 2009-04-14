@@ -1,0 +1,328 @@
+<html>
+<body>
+
+<h1>Programming Assignment 3</h1>
+
+<h2>Overview</h2>
+
+So far we have been using Perl for scripts that a user might want to use at a command line.  In this Assignment we will move from local users, to non-local users.
+
+<p>
+Assign 3: simplistic Web Server
+<ol>
+<li>	Read an HTTP request out of STDIN
+<li>	Output a corresponding HTTP response to STDOUT
+<li> 	Log the server activities
+</ol>
+</p>
+
+Your server will be tested with plain html files and with a server-side script. Your server should be able to act differently in the two cases. In the case of a normal file it will print out an HTTP response consisting of some headers and then the contents of the file. In the case of a server-side script it will run the script to generate the contents of the HTTP response.
+
+
+
+<h2>Marking Scheme</h2>
+
+
+<ol>
+	<li>Theory (30%)
+	<ol>
+		<li> Demonstrate understanding of your server script (readme, comments and usage)  (10%)
+		<li> Demonstrate understanding of HTTP requests and responses (10%)
+		<li> Demonstrate knowledge of Perl (10%)
+	</ol>
+	<li>Coding (70%)
+	<ol>
+		<li>Sever script
+		<li> ENV hash (10%)
+		<li> Logging (10%)
+		<li> Handle non-cgi requests (10%)
+		<li> Handle cgi requests (10%)
+		<li> Print HTTP response (10%)
+		<ol>
+			<li> GET method
+				<li> POST method
+		</ol>
+		<li> Print Error messages (10%)
+		<li> Clarity of algorithm design (10%)
+	</ol>
+</ol>
+
+
+<h2>1 Read an HTTP request</h2>
+
+<h3>1.1 A data structure to hold the HTTP request information</h3>
+
+<p>
+An HTTP (hypertext transfer protocol) request at it's most basic is a command like
+<blockquote>
+GET /somedirectory/filename.html  </blockquote></p>
+
+
+
+Here are some common variables that a websever needs to know. ( <a href="#Details">Click here for details</a>
+
+<ul>
+<li>Content-Length
+<li>Content-Type
+<li>Document-Root
+<li>Query-String
+<li>Request-Method
+<li>Server-Name
+<li>Server-Protocol
+<li>Server-Software
+</ul>
+
+
+<p>
+Store these variables and their values into a hash in your Perl script. Perl has a special hash for this purpose, its called %ENV.
+</p>
+
+
+<h3>1.2 Formatting the hash key value pairs</h3>
+For each variable value pair you will need to convert the letters to uppercase and replace - by _. For help doing this see the <a href="">tutorial on regular expressions.</a>
+</p>
+
+<blockquote>
+<p>
+<table border="1"><tr><td>
+</td><td>
+variable</td><td>
+value</td></tr><tr><td>
+HTTP Request</td><td>
+Request-Method: </td><td>
+Get
+</td></tr></table>
+
+</p>
+Would be inserted into your %ENV as a key value pair.
+
+<table border="1"><tr><td>
+Perl script</td><td>
+$ENV{REQUEST-METHOD} = 'GET';
+</td></tr></table>
+
+</blockquote>
+
+
+<p>
+
+Your server will have to process a CGI script written in Perl. The CGI will use some additional variables which you should also store in your %ENV, but prefix their keys with HTTP_ to keep them distinct from the standard ones above.
+
+<blockquote>
+<p>
+<table border="1"><tr><td>
+</td><td>
+variable</td><td>
+value</td></tr><tr><td>
+HTTP Request</td><td>
+File-for-upload: </td><td>
+heresmyassignment.zip
+</td></tr></table>
+
+</p>
+Would be inserted into your %ENV as a key value pair.
+<p>
+<table border="1"><tr><td>
+Perl script</td><td>
+$ENV{HTTP_FILE_FOR_UPLOAD} = 'heresmyassignment.zip';
+</td></tr></table>
+
+</blockquote>
+
+</p>
+
+<h2>2 Print the HTTP response</h2>
+
+<h3>2.1 Locate the file</h3>
+
+<p>Like your command line interpreter you have a path variable to say where your files are, however in this case its called a Document-Root. </p>
+
+<p>
+A URL (Uniform Resource Locator) on the internet is composed of 2 primary parts:
+
+<table border="1"><tr><td>
+1</td><td>
+2</td></tr><tr><td>
+The doman name which is licensed to you,</td><td>
+The path to the file on the server that should be displayed. </td></tr><tr><td>
+Eg: <a href="http://www.whois.net/whois_new3.cgi?d=concordia&tld=ca"> concordia.ca</a>
+</td><td>
+Eg. <a href="http://concordia.ca/info/futurestudents/undergraduate/">info/futurestudents/undergraduate/</a>
+</td></tr></table>
+
+A path on a server is also composed of 2 primary parts:
+
+<table border="1"><tr><td>
+1</td><td>
+2</td></tr><tr><td>
+The server root</td><td>
+The path to the file on the server that should be displayed. </td></tr><tr><td>
+Eg: /www/home/c/c_concordia</td><td>
+Eg. info/futurestudents/undergraduate/index.html
+</td></tr></table>
+
+<p>
+If the user gives a path to a directory, the script should display the "index.html" in that directory if there is one.
+</p>
+
+<p>Before you open the file be sure that it exists and that the "world" has permission to read it. You will need to reuse some of your code in Assignment 2 to check the permisions on the file before you open it.
+</p>
+
+<h3>2.2 Content Type and Content Length</h3>
+
+
+Before you can print out the contents of the file, you need to print out some headers so that the browser will know how to display the contents. The Content-Type you can figure out from the extension of the file which the user requested. The Content-Length 	 The length (in bytes) of the body of the HTTP request, you need **** to figure this out.
+
+
+<blockquote>
+Here are some common file extensions and their matching Content-Type:
+
+<table><tbody><tr><th> Extension </th><th> Content-Type </th></tr><tr><td> <strong>.html</strong> </td><td> text/html </td></tr><tr><td> <strong>.htm</strong> </td><td> text/html </td></tr><tr><td> <strong>.css</strong> </td><td> text/css </td></tr><tr><td> <strong>.txt</strong> </td><td> text/plain </td></tr><tr><td> <strong>.xml</strong> </td><td> text/xml </td></tr><tr><td> <strong>.gif</strong> </td><td> image/gif </td></tr><tr><td> <strong>.jpeg</strong> </td><td> image/jpeg </td></tr><tr><td> <strong>.jpg</strong> </td><td> image/jpeg </td></tr><tr><td> <strong>.png</strong> </td><td> image/png </td></tr><tr><td> <strong>.mp3</strong> </td><td> audio/mpeg </td></tr><tr><td> <strong>.pdf</strong> </td><td> application/pdf </td></tr><tr><td> <em>other</em> </td><td> application/octet-stream </td></tr></tbody></table></p>
+
+</blockquote>
+
+<p> Sample perl script<br/>
+<blockquote>
+<table border="1"><tr><td>
+Perl script</td><td>
+print "Content-type: text/html\n\n";<br/>
+print "Content-length: *****\n\n";
+</td></tr></table>
+
+</blockquote>
+
+
+
+<h3>2.3 Request non-CGI pages</h3>
+
+Requesting non .cgi pages will be done as described above. If there are problems y ou will need generate error pages.
+
+<h4>2.3.1 Errors </h4>
+
+<p>Your error pages should contain an error code, a message about what the problem might be and the server information. Try creating errors on the Concordia servers and see the kinds of information they print <a href="http://users.encs.concordia.ca/~v_cook/looking">http://users.encs.concordia.ca/~v_cook/looking</a> HINT: you should be able to replicate this information using the information you stored in %ENV.
+</p>
+Error pages:
+<ul>
+<li> If the file doesn't exist generate a "404 Not Found" page instead of the file body.
+<li> If there is a problem with the file's permissions generate a "403 Forbidden" page instead of the file body.
+<li> If the Request-Method is anything other than GET generate a "405 Method Not Allowed" page instead of the file body.
+<li> If the HTTP request is invalid (bad format) generate a "400 Bad Request" page instead of the file body.
+</ul>
+
+
+<h3>2.4 Request for CGI (Server-Side Scripts)</h3>
+
+***Some of them dont know HTML, and dont know how to make forms, and now need to learn the difference between Get and Post, all while using a textual browser??  I propose we provide the script so that they dont have to debug html but yet they still have to understand the difference between get and post*****
+
+<p>
+Your server will have to process a server side script. A server side script written in Perl is called a ‘.cgi’ script and uses the .cgi extension instead of .pl It will ask the user for a file to upload  and save onto the server.
+</p>
+
+<p>
+For bonus marks you can write the upload script yourself (if you know HTML and webforms), or you can test the server with the sample uploadfile.cgi we have provided.
+</p>
+
+<p>
+A CGI script will generate the content of the page rather than just display it, so you need to follow a different procedure than for the other context types.  If the .cgi script is executable output a status line and then system() to execute the script. The script will generate the Content-Type header and the body of the response.
+
+
+
+<blockquote>
+
+<ul><li> if the request method was GET, the response&#8217;s body should be a <span class="caps">HTML</span> content which includes a file upload form; submitting the form should send a <span class="caps">POST</span> request to the same cgi file.</li><li>
+<p>
+<a href="http://www.cknuckles.com/webapps/chap01/figures/fig1.10.gif">See here for the difference between GET and POST</a>
+</p>
+If the request method was POST, and the request body contains data
+needed for a file upload, the data should be read out of the body and
+the uploaded file should be save somewhere in the document root. The
+response body should be <span class="caps">HTML</span> content
+explaining the file has been uploaded; where it was uploaded to, as
+well as provide a link to download it again. If the request body does
+not contain data needed for a file upload, the response should be no
+different than that for a <span class="caps">GET</span> request.</li></ul>
+
+</blockquote>
+
+<h4>2.4.1 Errors</h4>
+
+<ul>
+<li> If cgi is not executable  generate a "500 Internal Server Error" page instead of the file body.
+</ul>
+
+
+ <h2>3 	Keep a Logfile</h2>
+<p>
+If your script is run with an &#8216;l&#8217; option set, it should write to a log
+file. Since your script only runs for the duration of one request, it
+must <strong>append</strong> output to the logfile. Every time your script is invoked, it must append a line to the logfiel similar to the following:</p>
+<pre class="code"><code>[10/Oct/2000:13:55:36 -0700] &#8220;GET /apache_pb.gif HTTP/1.0&#8221; 200 2326 &#8220;Mozilla/4.08 [en] (Win98; I ;Nav)&#8221;</code></pre>
+
+<p>
+This logging includes the following information:</p><ul><li> The current time and date when the script finished responding to the request, in braces, &#8216;[&#8217; and &#8216;]&#8217;.</li><li> The request line from the Http Request (in quotations).</li><li> The numeric part of the response&#8217;s status code.</li><li> The size &#8211; in bytes &#8211; of the Http response&#8217;s body.</li><li> The value of the User-Agent header from the request.</li></ul><p></p>
+
+
+
+<hr>
+
+
+
+
+<a name="Details">Details of a HTTP request header</a>
+
+
+<table><tbody><tr><th> Key </th><th> Request Header </th><th> Value </th></tr><tr><td>
+ <strong>CONTENT_LENGTH</strong> </td><td>
+ Content-Length </td><td>
+ The length (in bytes) of the body of the <span class="caps">HTTP</span> request, if provided by the <span class="caps">HTTP</span> Request&#8217;s header of the same name. <br>
+<font color ="990000">  Example: ??</font>
+
+ </td></tr><tr><td>
+ <strong>CONTENT_TYPE</strong> </td><td>
+ Content-Type </td><td>
+ The content type of the body of the <span class="caps">HTTP</span> request, if provided by the <span class="caps">HTTP</span> equests&#8217;s header of the same name. <br>
+ <font color ="990000">  Example:	text/html</font>
+
+ </td></tr><tr><td>
+ <strong>DOCUMENT_ROOT</strong> </td><td>
+ &#8211; </td><td>
+ The home directory of your &#8220;web server&#8221;; All requested URLs are considered to be relative to the document root. <br>
+ <font color ="990000">  Example: /www/home/u/u_user/</font>
+
+ </td></tr><tr><td>
+ <strong>QUERY_STRING</strong> </td><td>
+ &#8211; (in the request line) </td><td>
+ The query information obtained from the requested <span class="caps">URL</span> (anything after a &#8216;?&#8217; character) <br>
+<font color ="990000">  Example: validatelogin.cgi?user=michael&pass=this+isa+pass</font>
+
+ </td></tr><tr><td>
+ <strong>REQUEST_METHOD</strong> </td><td>
+ &#8211; (in the request line) </td><td>
+ The <span class="caps">HTTP</span> method used by this request. Provided by the <span class="caps">HTTP</span> request&#8217;s &#8216;request line&#8217;. <br>
+ <font color ="990000">  Example: GET</font>
+
+ </td></tr><tr><td>
+ <strong>SERVER_NAME</strong> </td><td>
+ Host </td><td>
+ The server&#8217;s name or ip address. Provided by the <span class="caps">HTTP</span> request&#8217;s &#8216;Host&#8217; header. <br>
+ <font color ="990000">  Example: users.encs.concordia.ca</font>
+
+ </td></tr><tr><td>
+ <strong>SERVER_PROTOCOL</strong> </td><td>
+ &#8211; (in the request line) </td><td>
+ The name and revision of the <span class="caps">HTTP</span> request&#8217;s protocol. Provided by the <span class="caps">HTTP</span> request&#8217;s &#8216;request line&#8217;.  <br>
+ <font color ="990000">  Example: HTTP/1.1</font>
+
+ </td></tr><tr><td>
+ <strong>SERVER_SOFTWARE</strong> </td><td>
+ &#8211; </td><td>
+ The name and version of your "web server" script which is answering these requests&#8230; try to have fun here, and give your script a cool name! <br>
+<font color ="990000">  Example: Apache/1.3.31 (Unix) mod_ssl/2.8.19 OpenSSL/0.9.7l</font><br>
+<font color ="990000"> Example of your own software: AFMPSTA A far more patchy server than Apache :)</font>
+
+
+
+ </td></tr></tbody></table></p>
+
+
+</body></html>
